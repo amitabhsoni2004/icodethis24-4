@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9eff0;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #181a3d;
+}
+
+.section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logincard {
+    height: 570px;
+    width: 850px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 0px 21px 20px -11px #494646;
+}
+
+.backimg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px 18px 18px 0px;
+}
+
+.backimg {
+    width: 45%;
+    position: relative;
+}
+
+.backimg svg {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.login {
+    padding: 50px 60px;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#email {
+    padding: 15px;
+    font-size: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+a {
+    color: #046586;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #046586;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    box-shadow:  0px 12px 20px -13px black;
+}
+
+.btn svg {
+    color: white;
+}
+
+.btn:hover {
+    color: #046586;
+    background-color: white;
+    border: 1px solid #046586;
+}
+
+.btn:hover svg {
+    color: #046586;
+}
+
+.p1,
+small {
+    text-align: center;
+}
+
+small {
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.account {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.account div {
+    width: 100%;
+    border: 0.5px solid rgb(165, 162, 162);
+    border-radius: 5px;
+    display: flex;
+    padding: 8px 40px;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.img {
+    height: 30px;
+    width: 33px;
+    object-fit: cover;
+}
+
+.p1 {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.p2 {
+    font-size: 14px;
+}
+
+.facebook:hover,
+.google:hover {
+    opacity: 0.7;
+    background-color: #046586;
+    color: white;
+}
+
+.hr {
+    margin: 20px 0px;
+}
+
+.gobackbtn {
+    position: absolute;
+    padding: 19px 70px;
+    border: none;
+    border-radius: 5px;
+    background-color: #046586;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-weight: 600;
+    font-size: 16px;
+    display: none;
+}
+
+.gobackbtn:hover,
+.close:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 16px 25px -10px black;
+}
+
+.loginmess {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    height: 55px;
+    background-color: white;
+    border: 0.1px solid rgb(193, 193, 193);
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    border-radius: 5px;
+}
+
+.greenTimer {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.greenTimer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(85, 174, 85);
+    animation: timer 3s ease-out 1;
+}
+
+.loginmess .message {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 10px 10px 5px;
+    text-wrap: nowrap;
+}
+
+.message p {
+    opacity: 0.7;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@keyframes timer {
+    100% {
+        width: 0%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .account,
+    .option {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .logincard {
+        height: fit-content;
+        margin: 25px 5px 0px 5px;
+    }
+
+    .login {
+        width: 86%;
+        padding: 36px 17px;
+    }
+
+    .backimg {
+        width: 14%;
+    }
+
+    .backimg svg {
+        top: 15px;
+        right: 7px;
+        height: 35px;
+        width: 35px;
+    }
+
+    .form {
+        gap: 50px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hr,
+    .account,
+    #email {
+        margin: 0px;
+    }
+
+    .loginmess {
+        width: 358px;
+        top: 6px;
+        right: 4px;
+    }
+}
