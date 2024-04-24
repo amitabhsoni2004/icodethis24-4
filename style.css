@@ -264,7 +264,7 @@ small {
 
     .logincard {
         height: fit-content;
-        margin: 25px 5px 0px 5px;
+        /* margin: 25px 5px 0px 5px; */
     }
 
     .login {
